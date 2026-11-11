@@ -1,0 +1,308 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gram Panchayat Website</title>
+    <link rel="stylesheet" href="st.css">
+</head>
+<body>
+
+<header>
+    <div class="brand">
+        <b>GP</b>
+        <span>
+            <strong>Gram Panchayat</strong>
+            <small>Digital Village Services Portal</small>
+        </span>
+    </div>
+
+    <button id="menu">☰</button>
+
+    <nav id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#schemes">Schemes</a>
+        <a href="#services">Services</a>
+        <a href="#complaints">Complaints</a>
+        <a href="#contact">Contact</a>
+        <button id="adminOpen">Admin</button>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+    <div>
+        <small class="eyebrow">WELCOME TO OUR VILLAGE PORTAL</small>
+        <h1>Better Services.<br>
+            <em>Stronger Village.</em>
+        </h1>
+
+        <p>
+            Access village information, public services,
+            government schemes and complaint registration
+            in one place.
+        </p>
+
+        <a class="btn" href="#services">Explore Services</a>
+        <a class="btn light" href="#complaints">Register Complaint</a>
+    </div>
+
+    <aside>
+        <div class="emoji">🏡</div>
+        <h2>Our Village, Our Responsibility</h2>
+        <p>A digital connection between citizens and the Gram Panchayat.</p>
+        <hr>
+        <b>24/7 Portal Access</b>
+        <p>Easy online requests • Clear status updates</p>
+    </aside>
+</section>
+
+<section id="about">
+    <small class="eyebrow">ABOUT US</small>
+    <h2>About Gram Panchayat</h2>
+
+    <p>
+        The Gram Panchayat works for village development
+        and provides essential local services. This portal
+        helps residents find information and send requests
+        conveniently.
+    </p>
+
+    <div class="cards">
+        <article>
+            <span>🌱</span>
+            <h3>Village Development</h3>
+            <p>Support for clean, safe and well-maintained public spaces.</p>
+        </article>
+
+        <article>
+            <span>🤝</span>
+            <h3>Citizen Support</h3>
+            <p>A simple way for residents to communicate with local officials.</p>
+        </article>
+
+        <article>
+            <span>📢</span>
+            <h3>Public Information</h3>
+            <p>Announcements and scheme information in one place.</p>
+        </article>
+    </div>
+</section>
+
+<section class="soft" id="schemes">
+    <small class="eyebrow">PUBLIC INFORMATION</small>
+    <h2>Government Schemes & Announcements</h2>
+
+    <p>
+        Sample information for demonstration.
+        Confirm eligibility and details with the relevant government office.
+    </p>
+
+    <div class="cards">
+        <article>
+            <label>PUBLIC WELFARE</label>
+            <h3>Housing Assistance</h3>
+            <p>Information for eligible households seeking housing-related assistance.</p>
+        </article>
+
+        <article>
+            <label>VILLAGE DEVELOPMENT</label>
+            <h3>Clean Village Initiative</h3>
+            <p>Community activities supporting sanitation and cleanliness.</p>
+        </article>
+
+        <article>
+            <label>CITIZEN SERVICE</label>
+            <h3>Public Service Guidance</h3>
+            <p>Guidance on documents and local Panchayat services.</p>
+        </article>
+    </div>
+</section>
+
+<section id="services">
+    <small class="eyebrow">ONLINE SERVICES</small>
+    <h2>Services for Citizens</h2>
+
+    <div class="cards">
+        <article>
+            <span>📝</span>
+            <h3>Certificate Request</h3>
+            <p>Enquire about certificates and documents handled by the Panchayat.</p>
+            <button class="link service" data-kind="Certificate Request">Use service →</button>
+        </article>
+
+        <article>
+            <span>💧</span>
+            <h3>Water Supply</h3>
+            <p>Report a water supply issue.</p>
+            <button class="link service" data-kind="Water Supply">Use service →</button>
+        </article>
+
+        <article>
+            <span>💡</span>
+            <h3>Street Light</h3>
+            <p>Report a street light issue.</p>
+            <button class="link service" data-kind="Street Light">Use service →</button>
+        </article>
+
+        <article>
+            <span>🛣️</span>
+            <h3>Road Maintenance</h3>
+            <p>Report a road or pathway issue.</p>
+            <button class="link service" data-kind="Road Maintenance">Use service →</button>
+        </article>
+    </div>
+</section>
+
+<section class="soft" id="complaints">
+    <small class="eyebrow">CITIZEN HELPDESK</small>
+    <h2>Complaint Registration</h2>
+    <p>Submit an issue and save the reference number shown after submission.</p>
+
+    <div class="layout">
+
+        <form id="complaintForm" class="panel">
+
+            <div class="two">
+                <label>
+                    Full Name
+                    <input name="name" required placeholder="Enter your name">
+                </label>
+
+                <label>
+                    Mobile Number
+                    <input name="mobile" required pattern="[0-9]{10}"
+                    maxlength="10" placeholder="10-digit mobile number">
+                </label>
+            </div>
+
+            <div class="two">
+                <label>
+                    Category
+                    <select name="category" required>
+                        <option value="">Select category</option>
+                        <option>Water Supply</option>
+                        <option>Road Maintenance</option>
+                        <option>Street Light</option>
+                        <option>Drainage</option>
+                        <option>Sanitation</option>
+                        <option>Other</option>
+                        <option>Certificate Request</option>
+                    </select>
+                </label>
+
+                <label>
+                    Village / Area
+                    <input name="area" required placeholder="Enter your area">
+                </label>
+            </div>
+
+            <label>
+                Description
+                <textarea name="description" rows="4"
+                required placeholder="Explain the issue"></textarea>
+            </label>
+
+            <button class="btn" type="submit">Submit Complaint</button>
+
+            <p class="note">Demo only: data is saved in this browser.</p>
+            <p id="formMessage" class="message"></p>
+        </form>
+
+        <aside class="panel">
+            <h3>🔎 Track Complaint</h3>
+            <p>Enter your complaint reference number.</p>
+
+            <form id="trackForm">
+                <label>
+                    Reference Number
+                    <input name="reference" required placeholder="Example: GP-123456">
+                </label>
+
+                <button class="btn dark">Check Status</button>
+            </form>
+
+            <p id="trackResult" class="message"></p>
+        </aside>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <div>
+        <small class="eyebrow">GET IN TOUCH</small>
+        <h2>Contact Gram Panchayat</h2>
+        <p>Contact your local office to verify official procedures and required documents.</p>
+    </div>
+
+    <div class="panel">
+        <p><b>Office:</b> Gram Panchayat Office</p>
+        <p><b>Working Hours:</b> Monday–Friday, 10 AM–5 PM (sample)</p>
+        <p><b>Email:</b> panchayat@example.com (sample)</p>
+        <p><b>Phone:</b> Add official contact number</p>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    © <span id="year"></span> Gram Panchayat Website –
+    Software Development Practices Mini Project
+    <br>
+    <small>Student demonstration website — not an official government portal.</small>
+</footer>
+
+<!-- ADMIN LOGIN -->
+
+<div class="backdrop" id="modal">
+    <div class="panel modal">
+
+        <button id="close" class="close">×</button>
+
+        <div id="login">
+            <small class="eyebrow">AUTHORIZED AREA</small>
+            <h2>Administrator Login</h2>
+
+            <form id="loginForm">
+                <label>
+                    Demo Password
+                    <input type="password" name="password" required>
+                </label>
+
+                <button class="btn">Login</button>
+                <p class="note">Demo password: admin123</p>
+                <p id="loginMessage"></p>
+            </form>
+        </div>
+
+        <div id="dashboard" hidden>
+            <h2>Admin Dashboard</h2>
+            <button id="logout" class="btn dark">Logout</button>
+            <p id="count"></p>
+
+            <div class="tablewrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Reference</th>
+                            <th>Citizen</th>
+                            <th>Category</th>
+                            <th>Area</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rows"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
